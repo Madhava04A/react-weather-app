@@ -22,29 +22,51 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
 }
+.navbar {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
 .input-city {
-  width: 40%;
+  width: 60%;
   padding: 0.5rem 1rem;
-  position: absolute;
-  top: 2rem;
-  left: 30%;
   font-size: 1.5rem;
   font-weight: 600;
   border: 2px white solid;
   border-radius: 1rem;
 }
+.submit-btn {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: 2px white solid;
+  border-radius: 10px;
+  cursor: pointer;
+}
 
 @media screen and (max-width: 450px) {
+  .navbar {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+  }
   .input-city {
-    width: 80%;
-    padding: 0.5rem 1rem;
-    position: absolute;
-    top: 2rem;
-    left: 10%;
+    width: 60%;
+    padding: 0.5rem;
     font-size: 1rem;
     font-weight: 600;
     border: 2px white solid;
     border-radius: 1rem;
+  }
+  .submit-btn {
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px white solid;
+    border-radius: 10px;
+    cursor: pointer;
   }
 }
 .display-result {
