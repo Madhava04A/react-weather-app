@@ -30,16 +30,36 @@ function App() {
       }
     }
   }
+  async function btnSearchWeather(e) {
+    {
+      try {
+        const response = await fetch(url, options);
+        const result = await response.json();
+        setWeatherData(result);
+        setCity("");
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  }
   return (
     <>
-      <input
-        type="text"
-        className="input-city"
-        placeholder="Enter city"
-        value={city}
-        onChange={(e) => setCity(e.target.value)}
-        onKeyDown={callWeatherData}
-      />
+      <nav className="navbar">
+        <input
+          type="text"
+          className="input-city"
+          placeholder="Enter city"
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+          onKeyDown={callWeatherData}
+        />
+        <button
+          type="submit"
+          className="submit-btn"
+          onClick={btnSearchWeather}>
+          search
+        </button>
+      </nav>
       <div className="App">
         <div className="display-result">
           {/*  Name of the Location */}
